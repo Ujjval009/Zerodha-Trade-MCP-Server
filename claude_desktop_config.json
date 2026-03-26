@@ -1,0 +1,9 @@
+{
+  "mcpserver": {
+      "zerodha-trade": {
+        "command": "C:/Users/Acer/AppData/Roaming/npm/bun.ps1",
+        "args": [
+           "C:/Users/Acer/PROJECT/zerodha-trade/index.ts"]
+      }
+    }
+  }
