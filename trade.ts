@@ -31,10 +31,10 @@ function getEnvOrFallback(name: string, fallback: string) {
 }
 
 // NOTE: access tokens expire; use env vars in production.
-const apiKey = getEnvOrFallback("KITE_API_KEY", "px73rxq21i23ebe4");
+const apiKey = getEnvOrFallback("KITE_API_KEY", "");
 const accessToken = getEnvOrFallback(
   "KITE_ACCESS_TOKEN",
-  "bB4Q40KXqies9RgkbLEh355DtdR6OYiP"
+  ""
 );
 
 const kc = new KiteConnect({ api_key: apiKey });

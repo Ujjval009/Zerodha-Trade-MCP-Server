@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # zerodha-trade
 
 To install dependencies:
@@ -58,3 +59,6 @@ What `execute-trade` does:
 For stronger safety than “Claude asks permission”, consider adding an enforced confirmation token/flag that `execute-trade` requires. (Not enabled by default in this version.)
 
 This project was created using `bun init` in bun v1.3.10. [Bun](https://bun.com) is a fast all-in-one JavaScript runtime.
+=======
+# Zerodha-Trade-MCP-Server
+>>>>>>> 46fc1a272fd07dfe04f0fbbb271f87ec7572a8e7
