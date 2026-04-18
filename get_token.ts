@@ -1,8 +1,16 @@
 import crypto from 'crypto';
+import * as dotenv from "dotenv";
+import { fileURLToPath } from "url";
+import { dirname, join } from "path";
 
-const API_KEY = "px73rxq21i23ebe4";
-const API_SECRET = "g0kuzz27nk715uurzrio2wph5e6to7v6";
-const REQUEST_TOKEN = "Wb16XLc6FW954EsMpjgACX8lft9WyOs3"; // <--- Put your request token here
+// Load environment variables from .env file
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
+dotenv.config({ path: join(__dirname, ".env") });
+
+const API_KEY = process.env.KITE_API_KEY || "";
+const API_SECRET = process.env.KITE_API_SECRET || "";
+const REQUEST_TOKEN = process.env.REQUEST_TOKEN || "REQUEST_TOKEN"; // <--- Put your request token here (or in .env)
 
 async function getAccessToken() {
     // Kite requires a SHA256 hash of: api_key + request_token + api_secret
