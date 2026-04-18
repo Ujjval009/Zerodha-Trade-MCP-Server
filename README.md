@@ -124,3 +124,7 @@ The server uses a smart execution strategy (`trade.ts`) when you place an order:
 * Algorithmic and programmatic trading involves significant financial risk.
 * **DO NOT** commit your `.env` file to GitHub or expose your API keys publicly.
 * The authors are not responsible for any financial losses incurred while using this code.
+
+
+## AUTHOR 
+- Ujjval Sharma 
