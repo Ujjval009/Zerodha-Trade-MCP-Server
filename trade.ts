@@ -1,4 +1,11 @@
 import { KiteConnect } from "kiteconnect";
+import * as dotenv from "dotenv";
+import { fileURLToPath } from "url";
+import { dirname, join } from "path";
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
+dotenv.config({ path: join(__dirname, ".env"), quiet: true } as any);
 
 const EXCHANGE = "NSE";
 const PRODUCT = "CNC";
@@ -38,6 +45,9 @@ const accessToken = getEnvOrFallback(
 );
 
 const kc = new KiteConnect({ api_key: apiKey });
+if (accessToken) {
+  kc.setAccessToken(accessToken);
+}
 
 // Small in-memory cache to avoid double quotes between prepare and execute.
 let quoteCache:
